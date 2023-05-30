@@ -1,0 +1,107 @@
+.homepage {
+    height: 100%;
+    overflow: auto;
+    padding-top: 80px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.card {
+    width: 200px;
+    height: 150px;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.card:nth-child(1) {
+    background-color: #E6E6FA;
+}
+
+.card:nth-child(2) {
+    background-color: #ff6961;
+}
+
+.card:nth-child(3) {
+    background-color: #ffda8a;
+}
+
+.card:nth-child(4) {
+    background-color: #DDA0DD;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    margin-bottom: 10px;
+    color: #333;
+    text-align: center;
+}
+
+.card-content {
+    font-size: 24px;
+    color: #555;
+    text-align: center;
+}
+
+.graph-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    height: 300px;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.graph-container canvas {
+    width: auto;
+    height: 100%;
+    max-width: 300px;
+    max-height: 300px;
+    margin-right: 10px;
+    border-radius: 12px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 767.98px) {
+    .card {
+        width: 100%;
+    }
+
+    .graph-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        overflow: auto;
+    }
+
+    .graph-container canvas {
+        margin-bottom: 10px;
+        border-radius: 0;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .graph-container {
+        justify-content: flex-start;
+    }
+
+    .graph-container canvas {
+        margin-right: 0;
+        border-radius: 0;
+    }
+}

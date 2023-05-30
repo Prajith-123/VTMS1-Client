@@ -1,0 +1,207 @@
+.container.Record {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.container.Record::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.Record.form-group {
+    margin-bottom: 15px;
+}
+
+.btn-equal-size {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-equal-size:hover {
+    transform: scale(1.1);
+}
+
+.button-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.table-wrapper {
+    max-height: 400px;
+    overflow-y: scroll;
+}
+
+.table {
+    table-layout: fixed;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table th,
+.table td {
+    padding: 8px;
+    border: 1px solid #ccc;
+    white-space: nowrap;
+}
+
+.table th {
+    position: sticky;
+    top: 0;
+    background-color: #f0f0f0;
+    font-weight: bold;
+    text-align: left;
+    z-index: 2;
+    border-top: none;
+}
+
+.Record.form-group {
+    margin-bottom: 15px;
+}
+
+.Record.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.Record.form-group input[type="text"],
+.Record.form-group input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.Record.form-group input[type="file"] {
+    padding: 5px;
+}
+
+.Record.form-group img {
+    display: block;
+    margin-top: 10px;
+    max-width: 100%;
+    height: auto;
+}
+
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.modal.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.modal-content select {
+    width: 100%;
+    padding: 9px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #fff;
+}
+
+.modal h4 {
+    margin: 0 0 20px;
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.modal button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.modal button.btn-primary {
+    background-color: #3498db;
+    color: #fff;
+    width: 50%;
+    margin: 0 auto;
+    display: block;
+}
+
+.modal button.btn-primary:hover {
+    background-color: #2980b9;
+}
+
+.modal button.btn-secondary {
+    background-color: #ccc;
+    color: #333;
+    margin-left: 10px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 10px;
+}
+
+.modal button.btn-secondary:hover {
+    background-color: #bbb;
+}
+
+/* Responsive Styles */
+.container.Record,
+.Record.form-group,
+.table {
+    margin-bottom: 15px;
+}
+
+.container.Record {
+    align-items: stretch;
+    overflow-x: auto;
+}
+
+.table {
+    width: auto;
+}
+
+@media (max-width: 600px) {
+
+    .Record.form-group,
+    .modal-content {
+        margin-bottom: 8px;
+        padding: 4px;
+    }
+
+    .modal h4 {
+        font-size: 14px;
+    }
+
+    .modal button {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}

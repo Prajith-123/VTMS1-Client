@@ -1,0 +1,192 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.box {
+    position: relative;
+    max-width: 400px;
+    width: 80%;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transform-origin: top;
+    opacity: 0;
+    animation: fade-in 0.5s forwards;
+}
+
+@keyframes fade-in {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.box:before,
+.box:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #968a00;
+    opacity: 0.05;
+    z-index: -1;
+}
+
+.box:before {
+    left: 0;
+    transform: skewX(-20deg);
+}
+
+.box:after {
+    right: 0;
+    transform: skewX(20deg);
+}
+
+.box-inner {
+    position: relative;
+    z-index: 2;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333333;
+    font-size: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.form-control {
+    margin-bottom: 20px;
+    text-align: center;
+    padding-left: calc(50% - 50%);
+    border: none;
+    border-bottom: 2px solid #cccccc;
+    width: 100%;
+    font-size: 16px;
+    background-color: #f7f7f7;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #ff7f50;
+    box-shadow: 0 0 5px #ff7f50;
+}
+
+.btn-primary {
+    display: block;
+    width: 100%;
+    padding: 12px 24px;
+    background-color: #ff7f50;
+    border: none;
+    border-radius: 50px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: #ff6347;
+}
+
+.link {
+    color: #ff7f50;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.link:hover {
+    color: #ff6347;
+    text-decoration: underline;
+}
+
+.curve {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background-color: #ff7f50;
+    border-radius: 50% 50% 0 0;
+    z-index: 1;
+    transform: scaleX(3);
+    animation: curveAnimation 3s infinite;
+}
+
+@keyframes curveAnimation {
+    0% {
+        transform: scaleX(3);
+    }
+
+    50% {
+        transform: scaleX(1);
+    }
+
+    100% {
+        transform: scaleX(3);
+    }
+}
+
+.password-input {
+    display: flex;
+    position: relative;
+}
+
+.password-toggle-icon {
+    position: absolute;
+    top: 32%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+p {
+    text-align: center;
+    margin-top: 10px;
+}
+
+a {
+    color: #ff8c00;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .Toastify__toast-container {
+        width: auto;
+        padding: 10px;
+        top: 12px;
+        right: 12px;
+    }
+
+    .Toastify__toast {
+        border-radius: 4px;
+        box-shadow: none;
+        width: auto;
+        margin-bottom: 8px;
+    }
+
+    .Toastify__toast-body {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
